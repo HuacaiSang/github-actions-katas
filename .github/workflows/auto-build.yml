@@ -21,9 +21,9 @@ jobs:
     steps:
       - name: download code
         uses: actions/download-artifact@v3
-          with:
-            name: code
-            path: .
+        with:
+          name: code
+          path: .
       - name: build application
         run: chmod +x ci/build-app.sh && ci/build-app.sh
       - name: test
